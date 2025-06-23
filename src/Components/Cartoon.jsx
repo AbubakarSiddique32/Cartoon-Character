@@ -1,7 +1,8 @@
 import React from "react";
 
 const Cartoon = () => {
-  return <div></div>;
+  return <div>
+   </div>;
 };
 
 export default Cartoon;
