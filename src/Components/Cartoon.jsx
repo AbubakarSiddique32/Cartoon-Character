@@ -1,14 +1,13 @@
 import React from "react";
+import Main from "./Main";
+import Navbar from "./Navbar";
+// import cartoonImage from "../assets/cartoon.png"; // replace with actual path to your image
 
 const Cartoon = () => {
   return (
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-        expedita sunt quod ipsa quia laboriosam provident harum explicabo illum
-        et eligendi, rerum voluptas dignissimos quisquam, unde error quae non?
-        Eum!
-      </p>
+    <div className="min-h-screen bg-[#b1903d] text-white font-sans">
+      <Navbar />
+      <Main />
     </div>
   );
 };
