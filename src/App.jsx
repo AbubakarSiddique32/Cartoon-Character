@@ -4,7 +4,9 @@ import Cartoon from "./Components/Cartoon";
 function App() {
   return (
     <>
-      <Cartoon />
+      <div className="">
+        <Cartoon />
+      </div>
     </>
   );
 }
