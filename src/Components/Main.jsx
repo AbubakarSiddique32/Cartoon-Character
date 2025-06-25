@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Sit from "../Images/SIT.png";
 import Green from "../Images/GREEN.png";
 import Smile from "../Images/SMILE.png";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 const characterData = [
   { id: 1, img: Sit, bgText: "LAUGH" },
@@ -74,13 +76,13 @@ const Main = () => {
               className="w-8 h-8 border border-white/60 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"
               onClick={handlePrev}
             >
-              ←
+              <FaArrowLeft />
             </button>
             <button
               className="w-8 h-8 border border-white/60 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"
               onClick={handleNext}
             >
-              →
+              <FaArrowRight />
             </button>
           </div>
         </div>
