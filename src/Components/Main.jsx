@@ -4,11 +4,12 @@ import Green from "../Images/GREEN.png";
 import Smile from "../Images/SMILE.png";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion, AnimatePresence } from "framer-motion";
 
 const characterData = [
-  { id: 1, img: Sit, bgText: "LAUGH" },
-  { id: 2, img: Green, bgText: "CREATE" },
-  { id: 3, img: Smile, bgText: "STYLE" },
+  { id: 1, img: Sit, bgText: "LAUGH", bgColor: "#b1903d" },
+  { id: 2, img: Green, bgText: "SPORTS", bgColor: "#69AC1D" },
+  { id: 3, img: Smile, bgText: "STYLISH", bgColor: "#673F96" },
 ];
 
 const Main = () => {
@@ -28,9 +29,24 @@ const Main = () => {
 
   const currentCharacter = characterData[currentIndex];
 
+  const textVariants = {
+    initial: { opacity: 0, y: 100 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    exit: { opacity: 0, y: -100, transition: { duration: 0.3 } },
+  };
+
+  const imageVariants = {
+    initial: { opacity: 0, y: -100 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    exit: { opacity: 0, y: 100, transition: { duration: 0.3 } },
+  };
+
   return (
-    <div>
-      <div className="flex flex-col md:flex-row  px-12">
+    <div
+      className="transition-colors duration-500 min-h-screen"
+      style={{ backgroundColor: currentCharacter.bgColor }}
+    >
+      <div className="flex flex-col md:flex-row px-12">
         {/* Left Section */}
         <div className="flex flex-col gap-4 w-[25%] mb-10 mt-20 md:mb-0">
           <h2 className="text-2xl font-bold uppercase">Cartoon Character</h2>
@@ -48,21 +64,38 @@ const Main = () => {
           </p>
         </div>
 
-        {/* Center Section: Dynamically updates using map */}
+        {/* Center Section */}
         {characterData.map((item, index) =>
           index === currentIndex ? (
             <div
-              className="relative w-[50%] items-center flex justify-center"
+              className="relative w-[50%] flex items-center justify-center h-[90vh]"
               key={item.id}
             >
-              <h1 className="absolute text-[150px] font-extrabold tracking-tight text-white/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
-                {item.bgText}
-              </h1>
-              <img
-                src={item.img}
-                alt="Cartoon Character"
-                className="relative z-10 w-[300px] md:w-[400px] h-full"
-              />
+              <AnimatePresence mode="wait">
+                {/* Text Animation */}
+                <motion.h1
+                  key={`text-${item.id}`}
+                  variants={textVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="absolute w-full text-[150px] text-center font-extrabold tracking-tight text-white top-[50%] left-0 -translate-x-1/2 -translate-y-1/2 z-0"
+                >
+                  {item.bgText}
+                </motion.h1>
+
+                {/* Image Animation */}
+                <motion.img
+                  key={`img-${item.id}`}
+                  src={item.img}
+                  alt="Cartoon Character"
+                  variants={imageVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="relative z-10 w-[300px] md:w-[400px] h-[90vh]"
+                />
+              </AnimatePresence>
             </div>
           ) : null
         )}
