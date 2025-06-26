@@ -30,9 +30,9 @@ const Main = () => {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center justify-between px-12">
+      <div className="flex flex-col md:flex-row  px-12">
         {/* Left Section */}
-        <div className="flex flex-col gap-4 max-w-xs mb-10 md:mb-0">
+        <div className="flex flex-col gap-4 w-[25%] mb-10 mt-20 md:mb-0">
           <h2 className="text-2xl font-bold uppercase">Cartoon Character</h2>
           <p className="text-sm">
             PUBLISHED
@@ -51,21 +51,24 @@ const Main = () => {
         {/* Center Section: Dynamically updates using map */}
         {characterData.map((item, index) =>
           index === currentIndex ? (
-            <div className="relative" key={item.id}>
+            <div
+              className="relative w-[50%] items-center flex justify-center"
+              key={item.id}
+            >
               <h1 className="absolute text-[150px] font-extrabold tracking-tight text-white/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
                 {item.bgText}
               </h1>
               <img
                 src={item.img}
                 alt="Cartoon Character"
-                className="relative z-10 w-[300px] md:w-[400px]"
+                className="relative z-10 w-[300px] md:w-[400px] h-full"
               />
             </div>
           ) : null
         )}
 
         {/* Right Section */}
-        <div className="max-w-sm text-sm text-white/80 leading-6 mt-6 md:mt-0">
+        <div className="w-[25%] text-sm text-white/80 leading-6 mt-20">
           <p>
             is a modern and stylish typeface designed for bold headlines and
             clean branding. With sharp lines and a futuristic feel, it’s perfect
