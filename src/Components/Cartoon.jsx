@@ -51,9 +51,11 @@ const Cartoon = () => {
       <div className="transition-colors duration-500 min-h-screen">
         <div className="flex flex-col md:flex-row px-12">
           {/* Left Section */}
-          <div className="flex flex-col gap-4 w-[25%] mb-10 mt-20 md:mb-0">
-            <h2 className="text-2xl font-bold uppercase">Cartoon Character</h2>
-            <p className="text-sm">
+          <div className="flex flex-col gap-2 w-[25%] mb-10 mt-20 md:mb-0 font-Mina">
+            <h2 className="text-[40px] font-bold uppercase ">
+              Cartoon Character
+            </h2>
+            <p className="text-sm ">
               PUBLISHED
               <br />
               2016-10-6
@@ -61,7 +63,7 @@ const Cartoon = () => {
             <p className="text-sm">
               MORE DIGITAL ART:
               <br />
-              <a href="#" className="underline text-blue-300">
+              <a href="#" className="hover:underline">
                 BEHANCE MORE
               </a>
             </p>
@@ -104,7 +106,7 @@ const Cartoon = () => {
           )}
 
           {/* Right Section */}
-          <div className="w-[25%] text-sm text-white/80 leading-6 mt-20">
+          <div className="w-[25%] text-sm text-white/80 leading-6 mt-20 font-Mina">
             <p>
               is a modern and stylish typeface designed for bold headlines and
               clean branding. With sharp lines and a futuristic feel, it’s

@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         Roboto: ['"Roboto"', "sans-serif"],
+        Mina: ['"Mina"', "sans-serif"],
       },
     },
   },
