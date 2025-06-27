@@ -4,7 +4,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#b1903d] text-white px-10 py-10 flex justify-between items-center font-semibold text-xs">
+    <nav className=" bg-transparent text-white px-10 py-10 flex justify-between items-center font-semibold text-xs">
       {/* Left Menu */}
       <div className="flex gap-[40px]">
         <a
