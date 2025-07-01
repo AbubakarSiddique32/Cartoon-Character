@@ -114,7 +114,10 @@ const Cartoon = () => {
               ipsum dolor, sit amet consectetur adipisicing elit. Delectus,
               suscipit! Corrupti debitis delectus quam, molestiae nostrum eius.
               Temporibus animi minus officia, quibusdam odit natus autem ex
-              saepe, ducimus aliquid nisi.
+              saepe, ducimus aliquid nisi. Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Quos dolorem repudiandae illum
+              facilis voluptate in magni velit earum ut, quo sint quibusdam
+              dolor fuga nihil illo ad est id minus?
             </p>
             <div className="flex space-x-4 mt-4">
               <button
