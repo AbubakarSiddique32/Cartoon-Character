@@ -110,7 +110,11 @@ const Cartoon = () => {
             <p>
               is a modern and stylish typeface designed for bold headlines and
               clean branding. With sharp lines and a futuristic feel, it’s
-              perfect for logos, posters, and digital design projects.
+              perfect for logos, posters, and digital design projects. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Delectus,
+              suscipit! Corrupti debitis delectus quam, molestiae nostrum eius.
+              Temporibus animi minus officia, quibusdam odit natus autem ex
+              saepe, ducimus aliquid nisi.
             </p>
             <div className="flex space-x-4 mt-4">
               <button
