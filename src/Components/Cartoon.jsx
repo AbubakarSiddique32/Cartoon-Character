@@ -6,6 +6,7 @@ import Smile from "../Images/SMILE.png";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
+import Footer from "./Footer";
 
 // import cartoonImage from "../assets/cartoon.png"; // replace with actual path to your image
 const characterData = [
@@ -136,7 +137,9 @@ const Cartoon = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
+    
   );
 };
 
