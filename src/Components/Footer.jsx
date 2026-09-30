@@ -4,7 +4,8 @@ const Footer = () => {
   return (
     <div>
       <div>
-        <h1>Footer</h1>
+        <h1>Cartoonish</h1>
+        <p>Cartoonish is a brand of cartoons that made in Pakistan</p>
       </div>
     </div>
   )
